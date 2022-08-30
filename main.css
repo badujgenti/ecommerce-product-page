@@ -71,7 +71,7 @@ body{
   }
   .image{
     
-    width: 375px;
+    width: 100%;
   }
   #images{
     display: flex;
@@ -267,6 +267,7 @@ body{
     position: absolute;
     top: 143px;
     left: 7px;
+    display: none;
   }
 .cart-text{
   font-family: 'Kumbh Sans';

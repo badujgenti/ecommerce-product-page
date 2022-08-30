@@ -53,6 +53,9 @@ const addToCart = document.querySelector(".add-to-card");
 addToCart.addEventListener("click" , ()=>{
   if (Number(valueCount[1].innerHTML)> 0 ){
   document.querySelector(".count-div-cart").style.display = "flex";
+  if (document.querySelector(".cart").style.display = "block"){
+  document.querySelector(".cart-items").style.display= "block"
+}
 }
   valueCount[0].innerHTML = valueCount[1].innerHTML;
   valueCount[2].innerHTML = valueCount[1].innerHTML;
@@ -62,10 +65,28 @@ addToCart.addEventListener("click" , ()=>{
   
 })
 
-const cart = document.getElementById("icon-cart");
-cart.addEventListener("click", ()=>{
-  document.querySelector(".cart").style.display = "block"
-  document.querySelector("")
+const cart1 = document.getElementById("icon-cart");
+cart1.addEventListener("click", ()=>{
+ const cart = document.querySelector(".cart");
+ 
+  const cartItems= document.querySelector(".cart-items");
+  if( cart.style.display  === "" && cartItems.style.display  === "" ){
+  
+    cart.style.display  = "block" 
+    if (+valueCount[2].innerHTML > 0){
+    cartItems.style.display = "block"
+  }
+  }else{
+    cart.style.display  = "" 
+    cartItems.style.display = ""
+
+  }
+})
+
+const deleteBtn = document.getElementById("trash");
+deleteBtn.addEventListener("click",()=>{
+  document.querySelector(".cart-items").style.display = "none";
+  document.querySelector(".count-div-cart").innerHTML = "0";
 })
 
 
