@@ -90,3 +90,14 @@ deleteBtn.addEventListener("click",()=>{
 })
 
 
+const rightArrow = document.querySelector(".right-arrow");
+rightArrow.addEventListener("click", ()=>{
+  const imageWidth = document.querySelector(".image").clientWidth;
+  document.querySelector(".image-content").scrollLeft += imageWidth;
+})
+
+const leftArrow = document.querySelector(".left-arrow");
+leftArrow.addEventListener("click", ()=>{
+  const imageWidth = document.querySelector(".image").clientWidth;
+  document.querySelector(".image-content").scrollLeft -= imageWidth;
+})
