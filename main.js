@@ -124,10 +124,13 @@ for (let i = 0; i < lilImage.length; i++) {
 }
 
 
-const zoomImg = document.querySelector('.image-content')
+const zoomImg = document.querySelector('.image-content');
+
 const background = document.querySelector(".background");
 zoomImg.addEventListener("click",()=>{
+  if(zoomImg.clientWidth > 380 ){
     background.style.display = "flex";
+  }
 })
 
 const closeIt = document.getElementById("closeit")
